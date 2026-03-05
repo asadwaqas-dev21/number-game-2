@@ -12,7 +12,7 @@ class HiddenRulesApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Hidden Rules Game',
+      title: 'Number Game',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.themeData,
       home: const PlayerCountScreen(),

@@ -1,6 +1,6 @@
 {
-    "name": "count_app",
-    "short_name": "count_app",
+    "name": "Number Game",
+    "short_name": "Number Game",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
