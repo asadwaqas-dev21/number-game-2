@@ -1,6 +1,21 @@
+import 'dart:math';
 import '../models/game_state.dart';
 
 class GameLogic {
+  static final _random = Random();
+
+  /// Pick a random mode that hasn't been used yet in this game.
+  static GameMode getRandomMode(List<GameMode> usedModes) {
+    final available = GameMode.values
+        .where((m) => !usedModes.contains(m))
+        .toList();
+    if (available.isEmpty) {
+      // All modes used, pick any
+      return GameMode.values[_random.nextInt(GameMode.values.length)];
+    }
+    return available[_random.nextInt(available.length)];
+  }
+
   static void calculateResults(GameState state) {
     final numbers = state.playerNumbers;
     List<double> scores = [];
